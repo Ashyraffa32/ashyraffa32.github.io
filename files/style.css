@@ -5,6 +5,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+  scrollbar-width: none;
   background: #000000;
 }
 
@@ -13,12 +14,12 @@ body, html {
     bottom: 20px;
     right: 20px;
     background: #000;
-    border: 3px solid #fff; /* Omori border style */
+    border: 3px solid #fff; 
     padding: 15px 20px;
     color: #fff;
     z-index: 999;
     border-radius: 8px;
-    font-size: 16px; /* Keep it small so it's not "disturbing" */
+    font-size: 16px; 
     display: flex;
     align-items: center;
     gap: 15px;
@@ -86,23 +87,23 @@ a:hover {
 /* --- Mobile Specific Styles --- */
 @media screen and (max-width: 768px) {
   .main-container {
-    margin: 5vh 10px; /* Less margin so it doesn't look like a tiny sliver */
-    padding: 20px;    /* Smaller padding so text has room to breathe */
-    font-size: 18px;  /* Scales down your huge 28px font for small screens */
+    margin: 5vh 10px; 
+    padding: 20px;   
+    font-size: 18px;  
   }
 
   nav {
-    justify-content: center; /* Center links so they are easier to tap */
-    flex-wrap: wrap;        /* Stack them if the screen is super narrow */
+    justify-content: center;
+    flex-wrap: wrap;        
     gap: 15px;
   }
 
   #navigation > nav > a {
-    font-size: 20px; /* Scale down the 31px nav links */
+    font-size: 20px; 
   }
   
   h1 {
-    font-size: 32px; /* Make sure the Welcome message isn't massive */
+    font-size: 32px; 
     text-align: center;
   }
 }
