@@ -1,4 +1,3 @@
-
     function checkFont(fontName) {
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
@@ -32,3 +31,8 @@
         selectedPage.style.display = 'block';
     }
 }
+
+document.addEventListener('A', function(event) {
+    // Your code to handle the key press goes here
+    alert('Key pressed:');
+});

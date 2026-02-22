@@ -26,7 +26,7 @@ body, html {
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.omori-toast button {
+.omori-toast button, #blind {
     background: none;
     border: 1px solid #fff;
     color: #fff;
