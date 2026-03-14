@@ -52,7 +52,7 @@ const defaultPhotos = [
     },
     {
             src: "memories/aubrey11.jpg", // Ganti ini pake path foto Aubrey lu
-        date: "1996",
+        date: "1991",
         timestamp: 1689120000000
     },
         {
