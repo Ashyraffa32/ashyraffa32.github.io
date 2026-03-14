@@ -1,27 +1,23 @@
-const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+// Fullscreen pas pertama kali klik
+document.addEventListener('click', () => {
+  const el = document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen;
+  if (req) req.call(el);
+}, { once: true });
  
-if (isMobile) {
-  document.addEventListener('click', () => {
-    const el = document.documentElement;
-    const req = el.requestFullscreen || el.webkitRequestFullscreen;
-    if (req) req.call(el);
-  }, { once: true });
- 
-  if (!isIOS) {
-    const fsEvent = document.fullscreenElement !== undefined ? 'fullscreenchange' : 'webkitfullscreenchange';
-    document.addEventListener(fsEvent, () => {
-      const isFs = document.fullscreenElement || document.webkitFullscreenElement;
-      if (!isFs) {
-        setTimeout(() => {
-          const el = document.documentElement;
-          const req = el.requestFullscreen || el.webkitRequestFullscreen;
-          if (req) req.call(el);
-        }, 300);
-      }
-    });
+// Paksa balik kalau keluar fullscreen
+const fsEvent = typeof document.onfullscreenchange !== 'undefined' ? 'fullscreenchange' : 'webkitfullscreenchange';
+document.addEventListener(fsEvent, () => {
+  const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+  if (!isFs) {
+    setTimeout(() => {
+      const el = document.documentElement;
+      const req = el.requestFullscreen || el.webkitRequestFullscreen;
+      if (req) req.call(el);
+    }, 300);
   }
-}
+});
+ 
 
 // Sebelum pindah halaman, simpan state fullscreen
 document.querySelectorAll('a').forEach(link => {
