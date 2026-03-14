@@ -1,11 +1,11 @@
 const birthdays = {
-    "1-1": "Hero's Birthday 🎂",
-    "18-2": "Basil's Birthday 🌻",
-    "1-3": "Mari's Birthday 🎹",
-    "23-5": "Aubrey's Birthday 🎀",
-    "20-7": "Sunny's Birthday 🔪",
-    "11-11": "Kel's Birthday 🏀",
-    "25-12": "Omori Game Anniversary 💿"
+    "1-1": "Hero's Birthday",
+    "18-2": "Basil's Birthday",
+    "1-3": "Mari's Birthday",
+    "23-5": "Aubrey's Birthday",
+    "20-7": "Sunny's Birthday",
+    "11-11": "Kel's Birthday",
+    "25-12": "Happy Anniversary Omori!"
 };
 
 let viewDate = new Date(); // Tanggal yang lagi dilihat
