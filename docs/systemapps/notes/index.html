@@ -48,6 +48,19 @@
      </div>
     </div>
 
+    <div id="custom-alert-overlay" class="ios-alert-overlay hidden">
+    <div class="ios-alert-box">
+        <div class="ios-alert-content">
+            <h3 id="alert-title">Delete Note</h3>
+            <p id="alert-message">Are you sure you want to delete this note?</p>
+        </div>
+        <div class="ios-alert-actions">
+            <button class="alert-btn cancel" onclick="closeCustomAlert()">Cancel</button>
+            <button id="alert-confirm-btn" class="alert-btn confirm">Delete</button>
+        </div>
+    </div>
+</div>
+
     <script src="notes.js"></script>
     <script src="../script.js"></script>
 </body>

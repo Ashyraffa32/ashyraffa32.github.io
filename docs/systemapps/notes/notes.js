@@ -79,24 +79,48 @@ function saveNote() {
 }
 
 // Fungsi buat hapus catatan yang lagi dibuka
+// Fungsi buat nampilin alert
+function showCustomAlert(title, message, confirmText, onConfirm) {
+    const overlay = document.getElementById('custom-alert-overlay');
+    document.getElementById('alert-title').innerText = title;
+    document.getElementById('alert-message').innerText = message;
+    
+    const confirmBtn = document.getElementById('alert-confirm-btn');
+    confirmBtn.innerText = confirmText;
+    
+    // Set fungsi baru tiap kali alert muncul
+    confirmBtn.onclick = onConfirm;
+
+    overlay.classList.remove('hidden'); // Munculin
+}
+
+// FUNGSI INI YANG PENTING BIAR BISA KE-HIDE
+function closeCustomAlert() {
+    const overlay = document.getElementById('custom-alert-overlay');
+    overlay.classList.add('hidden'); // Sembunyiin lagi
+}
+
+// Update fungsi delete biar pake alert baru
 function deleteCurrentNote() {
     if (!currentEditingId) return;
 
-    // Konfirmasi ala iOS (opsional, biar ga sengaja kehapus)
-    if (confirm("Delete this note?")) {
-        // Filter array: buang yang ID-nya sama ama yang lagi dibuka
-        notes = notes.filter(n => n.id !== currentEditingId);
-        
-        // Simpan perubahan ke localStorage
-        localStorage.setItem('aubrey_notes', JSON.stringify(notes));
-        
-        // Balik ke list utama
-        currentEditingId = null;
-        listView.classList.remove('hidden');
-        editorView.classList.add('hidden');
-        renderNotes();
-    }
+    showCustomAlert(
+        "Delete Note", 
+        "Are you sure you want to delete this note?", 
+        "Delete", 
+        () => {
+            notes = notes.filter(n => n.id !== currentEditingId);
+            localStorage.setItem('aubrey_notes', JSON.stringify(notes));
+            
+            currentEditingId = null;
+            closeCustomAlert(); // Tutup alert setelah konfirmasi
+            editorView.classList.add('hidden');
+            listView.classList.remove('hidden');
+            renderNotes();
+        }
+    );
 }
+
 
 // Update fungsi showList biar ga nge-save kalo baru aja dihapus
 function showList() {
