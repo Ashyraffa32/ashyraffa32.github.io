@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.status-bar.dark {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 15px;
+    font-size: 12px;
+    color: #000;
+    background: #fff;
+}
+
+.calendar-header {
+    border-bottom: 0.5px solid #bcbbc1;
+    padding-top: 10px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px 15px 15px;
+}
+
+.month-title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #ff3b30;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.days-label {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 11px;
+    color: #8e8e93;
+    padding-bottom: 8px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 5px;
+}
+
+.day {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Penanda Ulang Tahun */
+.is-birthday {
+    color: #ff3b30;
+    font-weight: bold;
+}
+
+.is-birthday::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    width: 4px;
+    height: 4px;
+    background: #ff3b30;
+    border-radius: 50%;
+}
+
+/* Highlight Tanggal yang Dipilih */
+.day.active {
+    color: #fff !important;
+}
+
+.day.active::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: #ff3b30;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Highlight abu-abu buat tgl biasa */
+.day.active:not(.is-birthday)::before {
+    background: #333;
+}
+
+.event-viewer {
+    flex: 1;
+    background: #f9f9f9;
+    border-top: 0.5px solid #bcbbc1;
+}
+
+.event-section-label {
+    padding: 15px;
+    font-size: 13px;
+    color: #8e8e93;
+    font-weight: 600;
+}
+
+.event-content {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 0.5px solid #bcbbc1;
+    font-size: 16px;
+    min-height: 50px;
+}

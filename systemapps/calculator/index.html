@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashy's Website</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="status-bar">
+        <span id="cellular">No Service</span>
+        <span id="time">10:25</span>
+        <span id="battery">22%</span>
+    </div>
+
+    <div class="calc-container">
+        <div class="screen" id="display">0</div>
+        
+        <div class="buttons">
+            <button class="btn light-grey" onclick="clearDisplay()">AC</button>
+            <button class="btn light-grey" onclick="toggleSign()">+/-</button>
+            <button class="btn light-grey" onclick="percentage()">%</button>
+            <button class="btn orange" onclick="setOperator('/')">÷</button>
+            
+            <button class="btn dark-grey" onclick="appendNumber('7')">7</button>
+            <button class="btn dark-grey" onclick="appendNumber('8')">8</button>
+            <button class="btn dark-grey" onclick="appendNumber('9')">9</button>
+            <button class="btn orange" onclick="setOperator('*')">×</button>
+            
+            <button class="btn dark-grey" onclick="appendNumber('4')">4</button>
+            <button class="btn dark-grey" onclick="appendNumber('5')">5</button>
+            <button class="btn dark-grey" onclick="appendNumber('6')">6</button>
+            <button class="btn orange" onclick="setOperator('-')">−</button>
+            
+            <button class="btn dark-grey" onclick="appendNumber('1')">1</button>
+            <button class="btn dark-grey" onclick="appendNumber('2')">2</button>
+            <button class="btn dark-grey" onclick="appendNumber('3')">3</button>
+            <button class="btn orange" onclick="setOperator('+')">+</button>
+            
+            <button class="btn dark-grey zero" onclick="appendNumber('0')">0</button>
+            <button class="btn dark-grey" onclick="appendNumber('.')">.</button>
+            <button class="btn orange" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="engine.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

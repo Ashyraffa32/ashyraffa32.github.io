@@ -1,0 +1,46 @@
+html, body {
+    height: 100%; /* Required for children to fill space */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    font-family: "Inter", sans-serif;
+    background-color: #efeff4;
+}
+
+.status-bar {
+    /* flex-shrink: 0 ensures the bar doesn't get squished */
+    flex-shrink: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    background: #efeff4;
+    color: #000;
+    position: sticky;
+    top: 0;
+}
+
+main {
+    margin-left: 5px;
+    margin-left: 5px;
+}
+
+#title {
+    text-align: center;
+}
+
+#introduction, #myjob {
+    text-align: left;
+    line-height: 1.6;
+}
+
+a {
+    color: #222;
+    text-decoration: underline;
+}

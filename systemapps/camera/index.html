@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ashy's Website</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <div id="camera-view" class="view active">
+        <div id="video-timer" class="hidden">00:00:00</div>
+        <video id="camera-stream" autoplay playsinline></video>
+        <canvas id="photo-canvas" style="display: none;"></canvas>
+
+        <div class="camera-top-bar">
+            <ion-icon name="flash-outline"></ion-icon>
+            <ion-icon name="aperture-outline"></ion-icon>
+            <ion-icon name="timer-outline"></ion-icon>
+            <ion-icon name="color-filter-outline"></ion-icon>
+        </div>
+
+        <div class="camera-bottom-bar">
+            <div class="camera-modes">
+                <span id="mode-video" onclick="switchMode('video')">VIDEO</span>
+                <span id="mode-photo" class="active" onclick="switchMode('photo')">PHOTO</span>
+                <span id="mode-square">SQUARE</span>
+            </div>
+            
+            <div class="shutter-row">
+                <div class="gallery-preview" id="gallery-preview"></div>
+                <div class="shutter-outer" onclick="takeAction()">
+                    <div class="shutter-inner" id="shutter-btn"></div>
+                </div>
+                <div class="flip-camera" onclick="flipCamera()">
+                    <ion-icon name="sync-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="camera.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

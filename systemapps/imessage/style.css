@@ -1,0 +1,124 @@
+body {
+    margin: 0; font-family: 'Inter', sans-serif;
+    background-color: #fff; overflow: hidden;
+}
+
+.status-bar.dark {
+    display: flex; justify-content: space-between;
+    padding: 6px 15px; font-size: 12px; color: #000;
+}
+
+.view { display: flex; flex-direction: column; height: 95vh; }
+.hidden { display: none !important; }
+
+.nav-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 15px; color: #007aff; font-size: 17px;
+}
+
+.view-title { margin: 0 15px 10px; font-size: 34px; font-weight: 700; }
+
+.search-bar {
+    margin: 0 15px 10px; background: #eeeff0;
+    padding: 8px; border-radius: 10px; color: #8e8e93;
+    display: flex; align-items: center; gap: 5px;
+}
+
+.chat-list { flex: 1; overflow-y: auto; border-top: 0.5px solid #c6c6c8; }
+
+.chat-item {
+    display: flex; align-items: center; padding: 10px 15px;
+    border-bottom: 0.5px solid #c6c6c8; gap: 15px; cursor: pointer;
+}
+
+.avatar {
+    width: 45px; height: 45px; border-radius: 50%;
+    background: #d1d1d6; display: flex; align-items: center;
+    justify-content: center; font-size: 20px; color: #fff;
+}
+
+.chat-info { flex: 1; overflow: hidden; }
+.chat-info h4 { margin: 0 0 3px; font-size: 16px; font-weight: 600; }
+.chat-info p { margin: 0; font-size: 14px; color: #8e8e93; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chat-time { font-size: 14px; color: #8e8e93; }
+
+/* CHAT VIEW */
+.chat-header { border-bottom: 0.5px solid #c6c6c8; background: #f9f9f9; padding-bottom: 10px; }
+.contact-name { font-weight: 600; color: #000; }
+.back-btn { display: flex; align-items: center; cursor: pointer; }
+
+.chat-bubbles {
+    flex: 1; overflow-y: auto; padding: 15px; display: flex; flex-direction: column; gap: 10px;
+}
+
+.bubble {
+    max-width: 70%; padding: 8px 14px; font-size: 16px; line-height: 1.4;
+    border-radius: 18px; position: relative;
+}
+
+/* Chat orang lain */
+.bubble.received {
+    background: #e5e5ea; color: #000; align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* Chat Aubrey (iMessage / Blue) */
+.bubble.sent.blue {
+    background: #007aff; color: #fff; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* Chat Aubrey (SMS / Green buat Basil) */
+.bubble.sent.green {
+    background: #34c759; color: #fff; align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* INPUT AREA */
+.chat-input-area {
+    display: flex; align-items: center; padding: 10px 15px; gap: 10px;
+    border-top: 0.5px solid #c6c6c8; background: #f9f9f9;
+}
+.input-icon { font-size: 24px; color: #8e8e93; }
+.input-box {
+    flex: 1; border: 1px solid #c6c6c8; border-radius: 20px;
+    padding: 6px 12px; font-size: 16px; color: #c6c6c8; background: #fff;
+}
+
+/* ALERT MODAL */
+.alert-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center; z-index: 100;
+}
+.ios-alert {
+    background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+    width: 270px; border-radius: 14px; text-align: center;
+}
+.ios-alert h3 { margin: 20px 0 5px; font-size: 17px; font-weight: 600; }
+.ios-alert p { margin: 0 15px 15px; font-size: 13px; color: #000; line-height: 1.3; }
+.alert-btn {
+    border-top: 0.5px solid #c6c6c8; padding: 12px 0;
+    color: #007aff; font-size: 17px; font-weight: 600; cursor: pointer;
+}
+
+/* TAMBAHAN UNTUK TIMESTAMP CHAT */
+.chat-timestamp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.chat-protocol {
+    font-size: 11px;
+    color: #8e8e93;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.chat-time-stamp {
+    font-size: 11px;
+    color: #8e8e93;
+    font-weight: 500;
+}

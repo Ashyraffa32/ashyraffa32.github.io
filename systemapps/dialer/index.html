@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ashy's Website</title>
+    <link rel="stylesheet" href="style.css">
+    	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <div class="status-bar dark">
+        <span id="cellular">No SIM</span>
+        <span id="time">12:45</span>
+        <span id="battery">88%</span>
+    </div>
+
+    <div id="view-contacts" class="phone-view">
+        <div class="nav-header">
+            <span class="text-blue">Groups</span>
+            <span class="contact-title">All Contacts</span>
+            <ion-icon name="add-outline" class="text-blue"></ion-icon>
+        </div>
+        <div class="search-bar">
+            <ion-icon name="search"></ion-icon> Search
+        </div>
+        <div class="contacts-list" id="contacts-container">
+            </div>
+    </div>
+
+    <div id="view-keypad" class="phone-view active">
+        <div class="dialer-screen">
+            <div id="dialed-number"></div>
+            <div id="add-number" class="hidden">Add Number</div>
+        </div>
+        
+        <div class="keypad-container">
+            <div class="key" onclick="press('1')">1</div>
+            <div class="key" onclick="press('2')">2<span>A B C</span></div>
+            <div class="key" onclick="press('3')">3<span>D E F</span></div>
+            <div class="key" onclick="press('4')">4<span>G H I</span></div>
+            <div class="key" onclick="press('5')">5<span>J K L</span></div>
+            <div class="key" onclick="press('6')">6<span>M N O</span></div>
+            <div class="key" onclick="press('7')">7<span>P Q R S</span></div>
+            <div class="key" onclick="press('8')">8<span>T U V</span></div>
+            <div class="key" onclick="press('9')">9<span>W X Y Z</span></div>
+            <div class="key" onclick="press('*')">*</div>
+            <div class="key" onclick="press('0')">0<span>+</span></div>
+            <div class="key" onclick="press('#')">#</div>
+        </div>
+
+        <div class="call-row">
+            <div class="call-btn" onclick="showSimAlert()">
+                <ion-icon name="call"></ion-icon>
+            </div>
+            <div id="backspace" class="hidden" onclick="backspace()">
+                <ion-icon name="backspace-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-bar">
+        <div class="tab" onclick="switchTab('contacts', this)">
+            <ion-icon name="person-circle"></ion-icon>
+            <span>Contacts</span>
+        </div>
+        <div class="tab active" onclick="switchTab('keypad', this)">
+            <ion-icon name="keypad"></ion-icon>
+            <span>Keypad</span>
+        </div>
+    </div>
+
+    <div id="sim-alert-overlay" class="alert-overlay hidden">
+        <div class="ios-alert">
+            <h3>No SIM Card Installed</h3>
+            <br>
+            <div class="alert-btn" onclick="closeSimAlert()">OK</div>
+        </div>
+    </div>
+
+    <script src="phone.js"></script>
+</body>
+</html>

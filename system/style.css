@@ -1,0 +1,106 @@
+/* iOS 10 Lockscreen Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+.lockscreen-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('wallpaper/aubrey.png') center/cover no-repeat;
+    filter: blur(0px) brightness(1.1);
+    z-index: 0;
+}
+.lockscreen-container {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+    height: 100vh;
+}
+.status-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px 0 24px;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.8;
+}
+.no-service {
+    padding-left: 10px;
+}
+.battery {
+    padding-right: 10px;
+}
+.clock {
+    margin-top: 60px;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.date {
+    margin-top: 8px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+}
+.notification {
+    margin-top: 32px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 340px;
+    width: auto;
+    padding: 16px 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #222;
+    font-size: 16px;
+}
+.notif-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.notif-icon {
+    font-size: 18px;
+    margin-right: 6px;
+}
+.notif-label {
+    font-weight: bold;
+    color: #f7b731;
+    margin-right: 8px;
+}
+.notif-time {
+    margin-left: auto;
+    font-size: 13px;
+    color: #888;
+}
+.notif-content {
+    font-size: 15px;
+    color: #333;
+}
+.notif-link {
+    color: #007aff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.home-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 0; right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    opacity: 0.85;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.15);
+}

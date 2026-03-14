@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Photos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <div class="status-bar dark">
+        <span id="cellular">No Service</span>
+        <span id="time">13:37</span>
+        <span id="battery">100%</span>
+    </div>
+
+    <div id="view-photos" class="view active">
+        <div class="nav-header">
+            <span class="text-blue">Years</span>
+            <span class="text-blue">Collections</span>
+            <span class="active-nav">Moments</span>
+        </div>
+        
+        <div class="photos-grid-container" id="moments-container">
+            </div>
+    </div>
+
+    <div id="photo-viewer" class="viewer-overlay hidden">
+        <div class="viewer-nav">
+            <ion-icon name="chevron-back-outline" onclick="closeViewer()"></ion-icon>
+            <span id="viewer-date">Date</span>
+            <ion-icon name="share-outline"></ion-icon>
+        </div>
+        <img id="full-img" src="" alt="">
+        <div class="viewer-bottom">
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="trash-outline" onclick="deleteCurrentPhoto()"></ion-icon>
+        </div>
+    </div>
+
+    <div class="tab-bar">
+        <div class="tab active">
+            <ion-icon name="images"></ion-icon>
+            <span>Photos</span>
+        </div>
+        <div class="tab" onclick="triggerUpload()">
+            <ion-icon name="add-circle"></ion-icon>
+            <span>Add Photo</span>
+        </div>
+        <div class="tab">
+            <ion-icon name="albums"></ion-icon>
+            <span>Albums</span>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" accept="image/*" hidden onchange="handleUpload(event)">
+
+    <div id="custom-alert-overlay" class="ios-alert-overlay hidden">
+    <div class="ios-alert-box">
+        <div class="ios-alert-content">
+            <h3 id="alert-title">Delete Photo</h3>
+            <p id="alert-message">Are you sure you want to delete this photo?</p>
+        </div>
+        <div class="ios-alert-actions">
+            <button class="alert-btn cancel" onclick="closeCustomAlert()">Cancel</button>
+            <button id="alert-confirm-btn" class="alert-btn destructive">Delete</button>
+        </div>
+    </div>
+</div>
+
+    <script src="photos.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

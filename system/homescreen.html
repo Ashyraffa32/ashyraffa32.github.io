@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ashy's Website</title>
+	<link rel="stylesheet" href="homescreen.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+		<div class="panel widgets-sidebar" id="ws">
+		<div class="ws-header">
+			<div class="ws-search"><ion-icon name="search"></ion-icon> Search</div>
+		</div>
+		<div class="widget-box">
+			<div class="widget-title"><ion-icon name="partly-sunny" style="color: #ff9500;"></ion-icon> Weather</div>
+			<div class="widget-content" style="display: flex; justify-content: space-between; align-items: center;">
+				<div>
+					<h2 style="margin: 0; font-size: 32px; font-weight: 300;">13°</h2>
+					<span style="color: #666; font-size: 14px;">Faraway Town</span>
+				</div>
+				<ion-icon name="sunny" style="font-size: 40px; color: #ffcc00;"></ion-icon>
+			</div>
+		</div>
+		<div class="widget-box">
+    <div class="widget-title"><ion-icon name="trending-up" style="color: #4cd964;"></ion-icon> Stocks</div>
+    <div class="widget-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-weight: bold; font-size: 15px;">NASDAQ</span>
+            <span style="background: #ff3b30; color: #fff; padding: 2px 8px; border-radius: 6px; font-size: 12px;">-0.15%</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold; font-size: 15px;">S&P 500</span>
+            <span style="background: #ff3b30; color: #fff; padding: 2px 8px; border-radius: 6px; font-size: 12px;">-0.37%</span>
+        </div>
+    </div>
+  </div>
+		<div class="widget-box">
+			<div class="widget-title"><ion-icon name="calendar" style="color: #ff3b30;"></ion-icon> News</div>
+			<div class="widget-content" style="color: #666; font-size: 14px;">
+				US’s Hegseth claims new Iran Supreme Leader Mojtaba Khamenei injured
+				<br><br>
+				<b>Al Jazeera</b>
+			</div>
+		</div>
+
+		<div class="widget-box">
+    <div class="widget-title"><ion-icon name="list" style="color: #ff9500;"></ion-icon> Reminders</div>
+    <div class="widget-content" style="font-size: 14px; color: #444;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <div style="width: 14px; height: 14px; border: 1.5px solid #ff9500; border-radius: 50%;"></div>
+            <span>Meet with Hooligans in secret hangout spot</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+            <div style="width: 14px; height: 14px; border: 1.5px solid #ff9500; border-radius: 50%;"></div>
+            <span>Go to Faraway Church to find some peace</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; opacity: 0.5;">
+            <ion-icon name="checkmark-circle" style="color: #ff9500; font-size: 16px;"></ion-icon>
+            <span style="text-decoration: line-through;">Pilgrimage to Mari's grave</span>
+        </div>
+    </div>
+</div>
+		</div>
+	</div>
+
+
+	<div class="panel notification-center" id="nc">
+		<div class="ws-header">
+			<div class="ws-search"><ion-icon name="search"></ion-icon> Search</div>
+		</div>
+		<div class="nc-notif">
+			<div class="nc-notif-title">
+				<div class="nc-notif-icon" style="color:#ffcc00"><ion-icon name="information-circle"></div>
+				<div class="nc-notif-label">Tips</div>
+				<div class="nc-notif-time">1m</div>
+			</div>
+			<div class="nc-notif-content">
+				<strong>How to navigate this website?</strong><br>
+				Simply, click an app, to go back to homescreen, press Back on your browser.
+			</div>
+		</div>
+		<div class="nc-notif">
+			<div class="nc-notif-title">
+				<span class="nc-notif-icon" style="color: #34c759;"><ion-icon name="chatbubble"></ion-icon></span>
+				<span class="nc-notif-label">Messages</span>
+				<span class="nc-notif-time">12m</span>
+			</div>
+			<div class="nc-notif-content">
+				<strong>Sunny</strong><br>
+				Hi Aubrey, do you want to meet at our secret hangout spot?? i have something to tell you :D
+			</div>
+		</div>
+		<div class="nc-notif">
+			<div class="nc-notif-title">
+				<span class="nc-notif-icon" style="color: #34c759;"><ion-icon name="chatbubble"></ion-icon></span>
+				<span class="nc-notif-label">Messages</span>
+				<span class="nc-notif-time">3h</span>
+			</div>
+			<div class="nc-notif-content">
+				<strong>Kel</strong><br>
+				PINK IS A GROSS COLOR I TELL YA!!!
+			</div>
+		</div>
+		<div class="nc-notif">
+			<div class="nc-notif-title">
+				<span class="nc-notif-icon" style="color: #ff2d55;"><ion-icon name="logo-instagram"></ion-icon></span>
+				<span class="nc-notif-label">Instagram</span>
+				<span class="nc-notif-time">1h</span>
+			</div>
+			<div class="nc-notif-content">
+				<strong>Hero</strong> liked your story.
+			</div>
+		</div>
+	</div>
+
+	<div class="homescreen-container">
+		<div class="status-bar">
+			<span id="cellular">No Service</span>
+			<span id="time">18:51</span>
+			<span id="battery">100%</sp5an>
+		</div>
+		<div class="grid">
+			<div class="app-container">
+				<a href="../systemapps/calendar/index.html">
+				<div class="app"><ion-icon name="calendar" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Calendar</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/photos/index.html">
+				<div class="app"><ion-icon name="images" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Photos</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/camera/index.html">
+				<div class="app"><ion-icon name="camera" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Camera</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="https://www.reddit.com/user/Low-Persimmon-3168/">
+				<div class="app"><ion-icon name="logo-reddit" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Reddit</div>
+			    </a>
+			</div>
+			<div class="app-container">
+				<a href="https://x.com/ashyraffa3409">
+				<div class="app"><ion-icon name="logo-twitter" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Twitter</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="https://www.tiktok.com/@raffa3527">
+				<div class="app"><ion-icon name="logo-tiktok" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">TikTok</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="https://www.instagram.com/ashy_ist_kalz/">
+				<div class="app"><ion-icon name="logo-instagram" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Instagram</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="https://github.com/Ashyraffa32">
+				<div class="app"><ion-icon name="logo-github" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">GitHub</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/notes/index.html">
+				<div class="app"><ion-icon name="document-text" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Notes</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/aboutme/index.html">
+				<div class="app"><ion-icon name="accessibility" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">About Me</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/calculator/index.html">
+				<div class="app"><ion-icon name="calculator" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Calculator</div>
+				</a>
+			</div>
+			<div class="app-container">
+				<div class="app" onclick="toggleFullscreen()"><ion-icon name="laptop" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Full Screen</div>
+			</div>
+			<div class="app-container">
+				<a href="../systemapps/settings/index.html">
+				<div class="app"><ion-icon name="settings" class="app-icon" style="color: #FFC0CB;"></ion-icon></div>
+				<div class="app-label">Settings</div>
+				</a>
+			</div>
+		</div>
+		<div class="dock">
+			<a href="../systemapps/dialer/index.html"><div class="dock-app"><ion-icon name="call" class="dock-icon" style="color:#FFC0CB;"></ion-icon></div></a>
+			<a href="../systemapps/safari/index.html"><div class="dock-app"><ion-icon name="compass" class="dock-icon" style="color:#FFC0CB;"></ion-icon></div></a>
+			<a href="../systemapps/imessage/index.html"><div class="dock-app"><ion-icon name="chatbubble" class="dock-icon" style="color:#FFC0CB;"></ion-icon></div></a>
+			<a href="../systemapps/google/index.html"><div class="dock-app"><ion-icon name="logo-google" class="dock-icon" style="color:#FFC0CB;"></ion-icon></div></a>
+		</div>
+	</div>
+
+<div class="panel control-center" id="cc">
+		<div class="cc-row toggles">
+			<div class="cc-btn"><ion-icon name="airplane"></ion-icon></div>
+			<div class="cc-btn active" style="background: #fff; color: #000; border-color: #fff;"><ion-icon name="wifi"></ion-icon></div>
+			<div class="cc-btn active" style="background: #fff; color: #000; border-color: #fff;"><ion-icon name="bluetooth"></ion-icon></div>
+			<div class="cc-btn"><ion-icon name="moon"></ion-icon></div>
+			<div class="cc-btn"><ion-icon name="lock-closed"></ion-icon></div>
+		</div>
+		<div class="cc-row slider-container">
+			<ion-icon name="sunny-outline" style="font-size: 20px; color: #888;"></ion-icon>
+			<div class="cc-slider"><div class="cc-slider-fill"></div></div>
+			<ion-icon name="sunny" style="font-size: 24px; color: #888;"></ion-icon>
+		</div>
+		<div class="cc-row tools">
+			<div class="cc-btn-tool"><ion-icon name="flashlight"></ion-icon></div>
+			<div class="cc-btn-tool"><ion-icon name="timer"></ion-icon></div>
+			<div class="cc-btn-tool"><ion-icon name="calculator"></ion-icon></div>
+			<div class="cc-btn-tool"><ion-icon name="camera"></ion-icon></div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<script>
+		function toggleFullscreen() {
+		  const elem = document.documentElement; // Targets the entire page
+
+  if (!document.fullscreenElement && // Standard syntax
+      !document.mozFullScreenElement && // Firefox
+      !document.webkitFullscreenElement && // Chrome, Safari & Opera
+      !document.msFullscreenElement // IE/Edge
+  ) {
+    // Enter fullscreen mode
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+  } else {
+    // Exit fullscreen mode
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE/Edge */
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) { /* Firefox */
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+      document.webkitExitFullscreen();
+    }
+  }
+		}
+	</script>
+	<noscript>
+		<p>This site requires JavaScript to run.</p>
+	</noscript>
+</body>
+</html>

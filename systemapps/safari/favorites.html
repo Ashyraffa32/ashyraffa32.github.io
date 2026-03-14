@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Favorites</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background-color: #ffffff;
+        user-select: none;
+      }
+
+      h2 {
+        font-size: 13px;
+        color: #8e8e93;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px 15px;
+      }
+
+      .fav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+      }
+
+      .icon-box {
+        width: 60px;
+        height: 60px;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin-bottom: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s;
+      }
+
+      .fav-item:active .icon-box {
+        transform: scale(0.9);
+        filter: brightness(0.8);
+      }
+
+      .fav-item span {
+        font-size: 11px;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      /* Warna-warna Ikon */
+      .google {
+        background-color: #ffffff;
+        color: #ff2d55;
+        border: 0.5px solid #e0e0e0;
+      }
+      .wiki {
+        background-color: #ffffff;
+        color: #000;
+        border: 0.5px solid #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Favorites</h2>
+
+    <div class="grid">
+      <a
+        class="fav-item"
+        href="https://www.google.com/?igu=1"
+      >
+        <div class="icon-box google">
+          <ion-icon name="logo-google"></ion-icon>
+        </div>
+        <span>Google</span>
+      </a>
+
+      <a
+        class="fav-item"
+        href="https://www.omori-game.com/"
+      >
+        <div class="icon-box" style="background-color: #000; overflow: hidden">
+          <img
+            src="pictures/Omori_Sprite.ico"
+            style="width: 80%; object-fit: contain"
+          />
+        </div>
+        <span>Omori</span>
+      </a>
+
+            <a
+        class="fav-item"
+        href="https://www.omori.fandom.com/wiki/OMORI_WIKI"
+      >
+        <div class="icon-box" style="background-color: rgb(223, 55, 55); overflow: hidden">
+          <img
+            src="pictures/Omori_Sprite.ico"
+            style="width: 80%; object-fit: contain"
+          />
+        </div>
+        <span>Omori Wiki</span>
+      </a>
+
+      <a class="fav-item" href="https://www.wikipedia.org">
+        <div class="icon-box wiki">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <span>Wikipedia</span>
+      </a>
+    </div>
+  </body>
+</html>
