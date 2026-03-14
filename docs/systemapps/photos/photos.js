@@ -50,6 +50,31 @@ const defaultPhotos = [
         date: "1991",
         timestamp: 1689120000000
     },
+    {
+            src: "memories/aubrey11.jpg", // Ganti ini pake path foto Aubrey lu
+        date: "1996",
+        timestamp: 1689120000000
+    },
+        {
+        src: "memories/aubrey12.jpg", // Ganti ini pake path foto Aubrey lu
+        date: "1991",
+        timestamp: 1689120000000
+    },
+            {
+        src: "memories/aubrey13.jpg", // Ganti ini pake path foto Aubrey lu
+        date: "1991",
+        timestamp: 1689120000000
+    },
+            {
+        src: "memories/aubrey14.jpg", // Ganti ini pake path foto Aubrey lu
+        date: "1991",
+        timestamp: 1689120000000
+    },
+            {
+        src: "memories/aubrey15.jpg", // Ganti ini pake path foto Aubrey lu
+        date: "1991",
+        timestamp: 1689120000000
+    },
 ];
 
 // 2. CEK LOCAL STORAGE
