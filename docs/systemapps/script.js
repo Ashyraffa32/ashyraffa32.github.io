@@ -1,3 +1,46 @@
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+ 
+if (isMobile) {
+  document.addEventListener('click', () => {
+    const el = document.documentElement;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (req) req.call(el);
+  }, { once: true });
+ 
+  if (!isIOS) {
+    const fsEvent = document.fullscreenElement !== undefined ? 'fullscreenchange' : 'webkitfullscreenchange';
+    document.addEventListener(fsEvent, () => {
+      const isFs = document.fullscreenElement || document.webkitFullscreenElement;
+      if (!isFs) {
+        setTimeout(() => {
+          const el = document.documentElement;
+          const req = el.requestFullscreen || el.webkitRequestFullscreen;
+          if (req) req.call(el);
+        }, 300);
+      }
+    });
+  }
+}
+
+// Sebelum pindah halaman, simpan state fullscreen
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      sessionStorage.setItem('wasFullscreen', 'true');
+    }
+  });
+});
+
+// Pas halaman baru load, cek apakah sebelumnya fullscreen
+if (sessionStorage.getItem('wasFullscreen') === 'true') {
+  document.addEventListener('click', () => {
+    const el = document.documentElement;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (req) req.call(el);
+  }, { once: true });
+}
+
 let startX = null;
 let startY = null;
 
