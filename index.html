@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ashyraffa's personal website. A software developer, web dev, and Omori fan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ashyraffa32.github.io/">
+    <meta property="og:title" content="[Ashyraffa] | [An Omori fan]">
+    <meta property="og:description" content="Ashyraffa's personal website. A software developer, web dev, and Omori fan.">
+    <meta property="twitter:url" content="https://ashyraffa32.github.io/">
+    <meta property="twitter:title" content="[Ashyraffa] | [An Omori Fan]">
+    <meta property="twitter:description" content="Ashyraffa's personal website. A software developer, web dev, and Omori fan.">
+    <link rel="stylesheet" href="files/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <title>Ashy's Website</title>
+</head>
+<body>
+<div id="font-warning" class="omori-toast" style="display: none;">
+    <span>this site looks better with the omori fonts installed. <br>if you have the copy of the game, you can install it on your device.</span>
+    <button onclick="document.getElementById('font-warning').style.display='none'">x</button>
+</div>
+<main class="main-container">
+    <div id="navigation">
+        <nav>
+            <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
+            <a href="javascript:void(0)" onclick="showPage('about')">About</a>
+            <a href="javascript:void(0)" onclick="showPage('projects')">Projects</a>
+            <a href="javascript:void(0)" onclick="showPage('social')">Social</a>
+            <a href="javascript:void(0)" onclick="showPage('blog')">Blog</a>
+        </nav>
+    </div>
+
+    <section id="home" class="page">
+        <h1>Welcome :)</h1>
+        <p>I'm <b>Ashyraffa</b>- a software developer, a web dev, and most importantly, an Omori fan. I have over 1K followers on <a href="https://tiktok.com/@raffa3527">TikTok</a>. I'm an Aubrey fan btw if you wanted to know.</p>
+        <h3>What i do?</h3>
+       <ul>
+        <li>I develop cross-platform utility software. My language of choice is HTML/CSS/JS, then I wrap it with frameworks. I usually use Tauri for desktop applications because they are light, faster than Electron.
+            For mobile applications, I use Capacitor.js because they felt easier to me. You can take a look at my code on <a href="https://github.com/Ashyraffa32">GitHub</a>.
+        </li>
+        <br>
+        <li>
+            I also makes websites sometimes, and make Omori contents on TikTok for you to enjoy!
+        </li>
+    </ul>
+
+    <p><b>Want to learn more?</b> Just explore the website. See you there~</p>
+    </section>
+
+    <section id="about" class="page" style="display:none;">
+        <h1>About Me</h1>
+        <p><b>This page is under construction.</b> Expect a lot of content here as time passes by. <span class="strong">Please report all bugs you found on the website to me</span>, I'll make sure to take care of it.</p>
+        <p>Nice to meet you! I'm Ashyraffa, a 15-year old guy from Banda Aceh, Indonesia. I have been developing websites since 13, and software since i was 14, and i always been interested in tech.
+            I'm a middle front-end web developer and a junior software developer.
+        </p>
+        <i style="font-size: 19px;">All titles are based on knowledge and confidence, not official work experience.</i>
+        <br><br>
+        <strong>Here's a little more about myself:</strong>
+        <ul>
+            <li>My favorite game is Omori (but i'm a late fan unfortunately)</li>
+            <li>My favorite character in Omori was <a href="https://omori.fandom.com/wiki/AUBREY">Aubrey.</a></li>
+            <li>My favorite field in school curiculum is History.</li>
+        </ul>
+        <h2>FAQs</h2>
+        <strong>❓ Why Aubrey was your favorite character?</strong>
+        <p>She just looks pretty to me (both Headspace and Real World form), but other than that, she teaches us that crying is not a problem, and
+            even with her difficulties, she continues to be a loving girl, also, she seems relatable to me, especially family problems.
+        </p>
+        <strong>❓ Since when you became an Omori fan?</strong>
+        <p>I'm late actually lol, since late Dec 2025 (their 5th anniversary!)</p>
+        <strong>❓ Why i receive a pop-up "This site looks better with an Omori font"?</strong>
+        <p>It's because my website are designed for the font, but since i cannot host it here on my site, because if i would, it
+            would be an copyright infrightment against OMOCAT, so if you have the copy of the game, you can install
+            the font on your device. You can check OMOCAT's Fan Policy <a href="https://www.omori-game.com/en/updates">here.</a>
+            You can also ignore the pop-up and continue navigating this website though...
+        </p>
+        <strong>❓ I have a copy of OMORI. How do i install the font?</strong>
+        <p>Simply do this:
+            <ol>
+                <li>Open <b>Steam</b> and go to your <b>Library.</b></li>
+                <li>Right-Click <b>OMORI.</b></li>
+                <li>Hover over <b>Manage</b> and click <b>Browse local files.</b></li>
+                <li>Once the folder pops up, just head into <b>www</b> folder, and then go to <b>fonts</b> folder.</li>
+                <li>Click "OMORI_GAME.ttf" and "OMORI_GAME2.ttf", it'll launch a Notepad, then click <b>Install.</b></li>
+                <li>To apply your changes in the website, restart your browser and go to this website again.</li>
+            </ol>
+        </p>
+    </section>
+
+    <section id="projects" class="page" style="display:none;">
+        <h1>My Projects</h1>
+        <h2>FractionCalc</h2>
+        <ul>
+            <li>FractionCalc is an ad‑free, open‑source fraction calculator designed to make working with fractions simple and fun. 
+            We built this to help middle‑school students (and teachers!) who need a fast, offline tool that just works. You can check it <a href="https://ashyraffa32.github.io/FractionCalcSite">here.</a></li>
+        </ul>
+        <h2>CoinTrack</h2>
+        <ul>
+            <li>CoinTrack is an ad‑free, open‑source finanlcial tracker designed to make financial managing simple. 
+                I built this to help treasurers who need a fast, offline tool that just works. See the code <a href="https://github.com/Ashyraffa32/Coin-Track">here.</a></li>
+        </ul>
+        <i style="font-size: 19px;">I only include supported projects here.</i>
+    </section>
+
+    <section id="social" class="page" style="display:none;">
+        <h1>Online footprint</h1>
+        <h2>Social Media:</h2>
+        <ul>
+            <li><a href="https://tiktok.com/@raffa3527">TikTok</a></li>
+            <li><a href="https://github.com/Ashyraffa32">GitHub</a></li>
+            <li><a href="https://www.instagram.com/ashy_ist_kalz/">Instagram</a></li>
+            <li><a href="https://www.reddit.com/user/Low-Persimmon-3168/">Reddit</a></li>
+			<li><a href="https://x.com/ashyraffa3409">Twitter (X)</a></li>
+        </ul>
+    </section>
+
+    <section id="blog" class="page" style="display: none;">
+       
+    </section>
+</main>
+</body>
+<script src="files/script.js"></script>
+</html>
