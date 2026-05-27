@@ -12,7 +12,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    font-family: 'Courier Prime', monospace;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
   }
 
 
@@ -56,14 +56,15 @@
   .door-wrap:hover .door-label { opacity: 1; }
 
   .door-label {
-    font-family: 'VT323', monospace;
-    font-size: 11px;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
+    font-size: 14px;
     color: white;
     opacity: 0;
     transition: opacity 0.2s;
     white-space: nowrap;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   .door-svg { display: block; }
@@ -88,7 +89,7 @@
     width: 100%;
     padding: 32px;
     position: relative;
-    font-family: 'Courier Prime', monospace;
+    font-family: 'OMORI_GAME', 'Courier Prime', monospace;
     animation: slideIn 0.2s ease;
   }
 
@@ -109,11 +110,12 @@
   .door-icon-sm { font-size: 20px; }
 
   .panel-title {
-    font-family: 'VT323', monospace;
-    font-size: 22px;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
+    font-size: 28px;
     color: #e0e0e0;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   .panel-close {
@@ -124,20 +126,21 @@
     border: 1px solid #2a2a2a;
     color: #666;
     cursor: pointer;
-    font-family: 'VT323', monospace;
-    font-size: 16px;
-    padding: 2px 8px;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
+    font-size: 18px;
+    padding: 4px 10px;
     letter-spacing: 1px;
     transition: all 0.15s;
+    font-weight: bold;
   }
 
   .panel-close:hover { color: #ccc; border-color: #555; }
 
-  .panel-body { color: #888; font-size: 14px; line-height: 1.8; }
+  .panel-body { color: #888; font-size: 16px; line-height: 1.8; }
 
   .panel-body h3 {
     color: #bbb;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 16px 0 8px;
@@ -151,12 +154,11 @@
   .tag {
     border: 1px solid #2a2a2a;
     color: #666;
-    font-size: 11px;
-    padding: 2px 8px;
+    padding: 4px 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: 'VT323', monospace;
-    font-size: 13px;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
+    font-size: 14px;
   }
 
   .blink {
@@ -186,8 +188,8 @@
 
   .corner-text {
     position: absolute;
-    font-family: 'VT323', monospace;
-    font-size: 12px;
+    font-family: 'OMORI_GAME', 'VT323', monospace;
+    font-size: 14px;
     color: #222;
     letter-spacing: 2px;
     z-index: 4;
@@ -204,7 +206,21 @@
     border: 2px solid white;
     background: #000;
     color: white;
-    width: 260px;
+    width: 280px;
     height: 180px;
     text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 16px;
+  }
+
+  /* Mobile responsive door positions */
+  @media (max-width: 640px) {
+    .door-wrap[data-id="1"] { left: 85% !important; top: 8% !important; }
+    .door-wrap[data-id="2"] { left: 15% !important; top: 12% !important; }
+    .door-wrap[data-id="3"] { left: 85% !important; top: 22% !important; }
+    .door-wrap[data-id="4"] { left: 15% !important; top: 35% !important; }
+    .door-wrap[data-id="5"] { left: 15% !important; top: 75% !important; }
+    .door-wrap[data-id="6"] { left: 85% !important; top: 75% !important; }
+    .door-wrap[data-id="7"] { left: 50% !important; top: 88% !important; }
   }
