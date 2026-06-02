@@ -1,104 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ashy's Space</title>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is Ashy's website.">
-    <meta name="author" content="Ashyraffa32">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-
-<div id="room">
-  <div class="room-border"></div>
-  <div class="vignette"></div>
-  <div class="scanline"></div>
-
-
-<div class="square">
-  <div class="carpet">
-    Welcome to Ashy's Space.
-    <br>
-    <br>
-    Click any door to explore my website.
-    <br>
-    <br>
-    Inspired from <a href="https://omori-game.com/" style="color: white;">Omori's</a> Black Space.
-  </div>
-</div>
-
-<div class="overlay" id="overlay">
-  <div class="panel" id="panel">
-    <button class="panel-close" onclick="closePanel()">[ X ]</button>
-    <div class="panel-header">
-      <span class="door-icon-sm"></span>
-      <span class="panel-title" id="panel-title">LOADING</span>
-    </div>
-    <div class="panel-body" id="panel-body"></div>
-  </div>
-</div>
-
-<script>
-const doors = [
-
-  { id:1, x:'92%', y:'12%', label:'Project', title:'PROJECTS', content:`<h3>Open source:</h3><p>→ <span style="color:#bbb">FractionCalc</span> — FOSS Fraction Calculator for Students.<br><a href="https://ashyraffa32.github.io/FractionCalcSite/" style="color:#444;font-size:12px">Link here.</a></p><br><h3>Omori Mods</h3><p>→ <span style="color:#bbb">Omori Bahasa Aceh</span> — Omori in Acehnese language (localization) <br><span style="color:#444;font-size:12px">Alpha · In Development</span></p>` },
-
-  { id:2, x:'26%', y:'19%', label:'Skills', title:'SKILLS', content:`<h3>Engineering</h3><p>Middle Front-End development, performance optimization.</p><h3>Support:</h3><p>IT Support, Personal Troubleshooter.</p><h3>Other</h3><div class="tag-row"><span class="tag">Junior Omori Modder</span><span class="tag">Open source</span><span class="tag">Mentoring</span></div>` },
-
-  { id:3, x:'64%', y:'22%', label:'Experience', title:'EXPERIENCE', content:`<p><span style="color:#bbb">Freelance Developer</span><br><span style="color:#555;font-size:12px">2023 – now</span>` },
-
-  { id:4, x:'11%', y:'37%', label:'Contacts', title:'CONTACT ME', content:`<h3>Reach me</h3><p>GitHub: github.com/Ashyraffa32</p><p>TikTok: @raffa3527</p><h3>Availability</h3><p>Busy with life right now. Not open for a long time.</p>` },
-
-  { id:5, x:'66%', y:'65%', label:'Gear', title:'GEAR', content:`<h3>Hardware</h3><p>ASUS Vivobook Go 14 E1404FA<br>Realme C31</p><h3>Software</h3><div class="tag-row"><span class="tag">VS Code</span><span class="tag">Android Studio</span><span class="tag">Git</span></div><h3>OS</h3><p>Windows (daily), Linux Mint XFCE (secondary)</p>` },
-
-  { id:6, x:'88%', y:'67%', label:'Gaming', title:'GAYMING', content:`<h3>Now playing</h3><p><span style="color:#bbb">Omori</span><br><span style="color:#bbb">Stardew Valley</span></p><h3>Recently played so far:</h3><p><span style="color:#bbb">Until Then</span><br><span style="color:#bbb">A Space For The Unbound</span></p><p><span style="color:#bbb">Hollow Knight</span><br><span style="color:#bbb">Hollow Knight: Silksong</span></p>` },
-
-  { id:7, x:'36%', y:'78%', label:'Me Right Now', title:'RIGHT NOW', content:`<h3>/now</h3><p>Focusing on <span style="color:#bbb">TKA</span>.</p><p>Learning full-stack development and front-end more deeper. also trying to get myself in Omori Modding.</p><p>Try to control myself more.</p><p><span style="color:#444;font-size:12px">Update: Maret 2026</span></p>` },
-];
-
-function makeDoor(d) {
-  const wrap = document.createElement('div');
-  wrap.className = 'door-wrap';
-  wrap.style.left = d.x;
-  wrap.style.top = d.y;
-  wrap.setAttribute('data-id', d.id);
-
-  const label = document.createElement('div');
-  label.className = 'door-label';
-  label.textContent = d.label;
-
-  const svg = `<svg class="door-svg" width="42" height="52" viewBox="0 0 22 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="1" y="1" width="20" height="30" stroke="#fff" stroke-width="1"/>
-    <rect x="15" y="14" width="3" height="3" fill="#fff"/>
-  </svg>`;
-
-  wrap.innerHTML = svg;
-  wrap.appendChild(label);
-  wrap.addEventListener('click', () => openPanel(d));
-  return wrap;
-}
-
-const room = document.getElementById('room');
-doors.forEach(d => room.appendChild(makeDoor(d)));
-
-function openPanel(d) {
-  document.getElementById('panel-title').textContent = d.title;
-  document.getElementById('panel-body').innerHTML = d.content;
-  document.getElementById('overlay').classList.add('active');
-}
-
-function closePanel() {
-  document.getElementById('overlay').classList.remove('active');
-}
-
-document.getElementById('overlay').addEventListener('click', function(e) {
-  if (e.target === this) closePanel();
-});
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closePanel();
-});
-</script>
-</body>
+    <meta name="description" content="raffa3527's Personal Website">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>raffa3527's Website</title>
+</head>
+<body>
+    <body>
+        <header>
+            <h1>raffa3527</h1>
+        </header>
+        <nav>
+            <a href="https://www.tiktok.com/@raffa3527" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/ashy_ist_kalz/" target="_blank">Instagram</a>
+            <a href="https://x.com/ashyraffa3409" target="_blank">Twitter</a>
+            <a href="https://www.reddit.com/user/Low-Persimmon-3168/" target="_blank">Reddit</a>
+            <a href="https://github.com/Ashyraffa32" target="_blank">GitHub</a>
+        </nav>
+        <main>
+            <h1>Welcome to my website.</h1>
+            <p>Let's explore. To see what I do, just scroll down.</p>
+            <section id="introduction">
+                <h1>Introduction</h1>
+                <p>I'm a person who loves coding and plays indie games. <br> I've been famous on TikTok as an Omori fan.</p>
+            </section>
+            <section id="whatido">
+                <h1>What I Do?</h1>
+                <p>Usually I'm working on tech stuff like coding, designing, or sharing fandom posts on social media.
+                    I'm a junior web developer. Tech Stack? Electron/Tauri for software dev, HTML/CSS/JS, sometimes
+                    frameworks like Bootstrap or Tailwind.
+                </p>
+            </section>
+            <section id="blogs">
+                <h1>Blogs?</h1>
+                <p>Having a plan to built my own note blog here on my own website. <br> Stay tuned :D
+                </p>
+                <button>Coming Soon...</button>
+            </section>
+        </main>
+        <br>
+        <br>
+        <br>
+        <footer>
+            That's it bye lol
+        </footer>
+    </body>
 </html>
