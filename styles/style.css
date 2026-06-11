@@ -1,3 +1,77 @@
+@import url('https://googleapis.com');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+.indie-countdown-container {
+    background-color: #000000;
+    color: #ffffff;
+    border: 4px solid #ffffff;
+    padding: 25px;
+    font-family: 'Courier Prime', monospace;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    margin: 30px auto;
+    box-shadow: 6px 6px 0px #ff3333; /* Shadow merah ala game retro */
+}
+
+.indie-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #ff3333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.indie-subtitle {
+    font-size: 0.85rem;
+    color: #bbbbbb;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.indie-timer {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    padding: 12px;
+    border: 2px dashed #ffffff;
+    background-color: #111111;
+}
+
+.indie-flavor-text {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    color: #aaaaaa;
+}
+
+.indie-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    letter-spacing: 1px;
+}
+
+.indie-btn:hover {
+    background-color: #ff3333;
+    color: #ffffff;
+    border-color: #ff3333;
+}
+
 html {
     overflow-x: hidden !important;
     font-size: 16px;
@@ -31,13 +105,17 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin: 12px auto 24px;
+    padding: 0 6px;
+    width: 100%;
     max-width: 1000px;
 }
 
 nav a {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 14px;
     color: #000;
     background: #fff;
@@ -45,6 +123,10 @@ nav a {
     border-radius: 999px;
     text-decoration: none;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    flex: 1 1 120px;
+    min-width: 90px;
+    white-space: normal;
+    text-align: center;
 }
 
 nav a:hover {
@@ -73,19 +155,20 @@ main h1 {
 
 main p {
     color: #4f4f4f;
-    max-width: 760px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 #introduction,
 #whatido,
-#blogs {
+#blogs,
+#mywork {
     background: #fff;
     border: 1px solid #dde1e7;
     border-radius: 18px;
     padding: 24px;
     width: 100%;
-    max-width: 540px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -95,7 +178,8 @@ main p {
 
 #introduction:hover,
 #whatido:hover,
-#blogs:hover {
+#blogs:hover,
+#mywork:hover {
 
     background: #111;
     color: #fff;
@@ -103,20 +187,23 @@ main p {
 
 #introduction:hover p,
 #whatido:hover p,
-#blogs:hover p {
+#blogs:hover p,
+#mywork:hover p {
     color: #f2f2f2;
 }
 
 #introduction h1,
 #whatido h1,
-#blogs h1 {
+#blogs h1,
+#mywork h1 {
     margin: 0;
     font-size: 1.6rem;
 }
 
 #introduction p,
 #whatido p,
-#blogs p {
+#blogs p,
+#mywork p {
     margin: 0;
     color: #4a4a4a;
 }
@@ -158,6 +245,8 @@ footer {
     nav a {
         padding: 10px 12px;
         font-size: 0.95rem;
+        flex: 1 1 100px;
+        min-width: 80px;
     }
 
     main {
@@ -170,7 +259,8 @@ footer {
 
     #introduction,
     #whatido,
-    #blogs {
+    #blogs,
+    #mywork {
         padding: 18px;
         max-width: 100%;
     }
