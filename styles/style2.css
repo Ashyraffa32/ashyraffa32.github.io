@@ -66,6 +66,10 @@ main p {
     margin: 0 auto;
 }
 
+.download-button {
+    text-align: center;
+}
+
 
 #saveanywhere {
     background: #fff;
