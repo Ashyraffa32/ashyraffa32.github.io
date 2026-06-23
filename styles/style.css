@@ -21,13 +21,12 @@ body {
     max-width: 500px;
     width: 100%;
     margin: 30px auto;
-    box-shadow: 6px 6px 0px #ff3333; /* Shadow merah ala game retro */
 }
 
 .indie-title {
     font-size: 1.3rem;
     letter-spacing: 1px;
-    color: #ff3333;
+    color: #ffffff;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -67,9 +66,7 @@ body {
 }
 
 .indie-btn:hover {
-    background-color: #ff3333;
-    color: #ffffff;
-    border-color: #ff3333;
+    color: #333333;
 }
 
 html {
@@ -226,6 +223,11 @@ button:hover {
 
 footer {
     text-align: center;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {

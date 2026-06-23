@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden !important;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 20px 16px 32px;
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0 8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+}
+
+main {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+main h1,
+main p {
+    margin: 0;
+    text-align: center;
+}
+
+main h1 {
+    font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+}
+
+main p {
+    color: #4f4f4f;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+#saveanywhere {
+    background: #fff;
+    border: 1px solid #dde1e7;
+    border-radius: 18px;
+    padding: 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#saveanywhere:hover {
+    background: #111;
+    color: #fff;
+}
+#saveanywhere:hover p {
+    color: #f2f2f2;
+}
+
+#saveanywhere h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+#saveanywhere p {
+    margin: 0;
+    color: #4a4a4a;
+}
+
+footer {
+    text-align: center;
+}
