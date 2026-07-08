@@ -1,5 +1,5 @@
-// Target waktu uji coba masif: 1 September 2026
-const targetLockdownDate = new Date("September 1, 2026 00:00:00").getTime();
+// Target waktu uji coba masif: 30 September 2026
+const targetLockdownDate = new Date("September 30, 2026 00:00:00").getTime();
 
 const runAndroidTimer = setInterval(function() {
     const currentTime = new Date().getTime();
