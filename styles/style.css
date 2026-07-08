@@ -15,8 +15,9 @@ body {
     background-color: #000000;
     color: #ffffff;
     border: 4px solid #ffffff;
+    border-radius: 20px;
     padding: 25px;
-    font-family: 'Courier Prime', monospace;
+    font-family: 'Inter', sans-serif;
     text-align: center;
     max-width: 500px;
     width: 100%;
@@ -56,6 +57,7 @@ body {
 
 .indie-btn {
     display: inline-block;
+    border-radius: 15px;
     background-color: #ffffff;
     color: #000000;
     text-decoration: none;
