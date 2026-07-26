@@ -60,14 +60,42 @@ main h1 {
     font-size: clamp(1.8rem, 2.4vw, 2.6rem);
 }
 
+main h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+    color: #111;
+}
+
 main p {
     color: #4f4f4f;
     max-width: 100%;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
 .download-button {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-align: center;
+    text-decoration: none;
+    margin: 12px 0;
+}
+
+.download-button:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:active {
+    transform: translateY(0);
 }
 
 
@@ -93,6 +121,7 @@ main p {
     color: #f2f2f2;
 }
 
+
 #saveanywhere h1 {
     margin: 0;
     font-size: 1.6rem;
@@ -103,6 +132,170 @@ main p {
     color: #4a4a4a;
 }
 
+.tutorial-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: all 0.3s ease;
+}
+
+.tutorial-card:hover {
+    background: #fff;
+    border-color: #dde1e7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tutorial-card h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: #111;
+}
+
+.tutorial-card p {
+    margin: 0 0 8px 0;
+    color: #4f4f4f;
+    line-height: 1.7;
+}
+
+.tutorial-card ol,
+.tutorial-card ul {
+    margin: 8px 0;
+    padding-left: 24px;
+    color: #4f4f4f;
+    line-height: 1.8;
+}
+
+.tutorial-card li {
+    margin: 6px 0;
+}
+
 footer {
     text-align: center;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.carousel-slide-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 3;
+    background: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-arrow {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #111;
+    padding: 8px 12px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.carousel-arrow:hover {
+    color: #4f4f4f;
+    transform: scale(1.1);
+}
+
+.carousel-arrow:active {
+    transform: scale(0.95);
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #dde1e7;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #111;
+}
+
+.dot:hover {
+    background: #4f4f4f;
+}
+
+@media (max-width: 768px) {
+    .carousel-arrow {
+        font-size: 2rem;
+    }
+}
+
+/* Video Player Styles */
+.video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.video-player {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #000;
+    display: block;
+}
+
+.video-player:focus {
+    outline: 2px solid #111;
+    outline-offset: 2px;
 }

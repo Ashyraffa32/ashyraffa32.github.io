@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneShot - Acehnese</title>
+    <link rel="stylesheet" href="../styles/style2.css">
+    <style>
+        a {
+            color: rgb(111, 202, 232);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OneShot - Acehnese</h1>
+    </header>
+    <main>
+        <section class="carousel-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow carousel-arrow-prev" onclick="changeSlide(-1)">❮</button>
+                <div class="carousel-slide-container">
+                    <img class="carousel-slide" src="images/oneshot-acehnese/gameplay6.png" alt="OneShot - Acehnese Gameplay">
+                    <img class="carousel-slide" src="images/oneshot-acehnese/gameplay5.png" alt="OneShot - Acehnese Gameplay">
+                    <img class="carousel-slide" src="images/oneshot-acehnese/gameplay3.png" alt="OneShot - Acehnese Gameplay">
+                    <img class="carousel-slide" src="images/oneshot-acehnese/gameplay1.png" alt="OneShot - Acehnese Gameplay">
+                    <img class="carousel-slide" src="images/oneshot-acehnese/gameplay2.png" alt="OneShot - Acehnese Gameplay">
+                </div>
+                <button class="carousel-arrow carousel-arrow-next" onclick="changeSlide(1)">❯</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+
+        <section class="video-container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Gameplay Video (Alpha)</h2>
+            <video class="video-player" controls>
+                <source src="images/oneshot-acehnese/gameplayvideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="saveanywhere">
+            <h2 style="text-align: center; color: #fff;">Peu Haba, Rakan??</h2>
+            <p>Lôn teungoh mēcubo teureujamah game OneShot u lam Bahsa Acèh keu pikeun peulestari budaya ngon bahsa ma geutanyoe, u lam game nyang lôn galak ngon lôn sayang :D <br>
+               <b>Jak ta meu'en OneShot! Gata jeuet neubloe OneShot bak <a href="https://store.steampowered.com/app/420530/OneShot/">Steam.</a></b></p>
+            </p>
+        </section>
+
+        <section>
+            <h2 style="text-align: center;">About This Mod:</h2>
+            <p>This is a translation mod for OneShot in Acehnese language. To know more about Aceh, click <a href="https://en.wikipedia.org/wiki/Aceh" target="_blank">here.</a><br> To know more about the mod, scroll the page.</p>
+        </section>
+
+        <section class="tutorial-card">
+            <h2 style="text-align: center;">You may ask. Why i made this?</h2>
+            <p>Acehnese is my mother tongue, therefore, this language was threatened with extinction. I tried to preserve it by creating this translation mod for Acehnese for the game OneShot.</p>
+            <p>For data about the extinction status of the Acehnese language, click <a href="https://www.ethnologue.com/language/ace/" target="_blank">here.</a></p>
+        </section>
+
+        <section class="tutorial-card">
+            <h2>"I'm interested! Where do you guys update your progress?"</h2>
+            <p style="text-align: left;">We mainly update our progress on:</p>
+            <ol>
+                <li><b>Reddit,</b> we update mainly on <a href="https://www.reddit.com/r/oneshot/" target="_blank">r/oneshot.</a></li>
+                <li><b>Discord,</b> we update mainly on the official OneShot Discord server, specifically, the <b>terminal-data</b> channel.</li>
+                <li><b>Bluesky,</b> we mainly updates gameplay and fanarts here.</li>
+            </ol>
+        </section>
+
+        <section class="tutorial-card">
+            <h2 style="text-align: center;">Release When??</h2>
+            <p>This mod was still in progress. Release date will be announced soon.</p>
+        </section>
+
+        <section class="tutorial-card">
+            <h2>Credits:</h2>
+            <ul>
+                <li><b>raffa3527 (Ahab),</b> Programmer, Modder, Project Lead</li>
+                <li><b>Hekaci,</b> Translator</li>
+                <li><b>Azusa,</b> Native Speaker, Translator</li>
+                <li><b>monarchatto,</b> Native Speaker</li>
+            </ul>
+            <p style="text-align: left">Do you wanna contribute? Feel free to reach me on Discord or <a href="https://www.reddit.com/user/Low-Persimmon-3168" target="_blank">Reddit.</a> You can DM me there and we'll talk :D</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="myprojects.html">← Back to My Projects</a></p>
+    </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(n) {
+            if (n >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (n < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = n;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlideIndex + n);
+        }
+
+        function currentSlide(n) {
+            showSlide(n);
+        }
+
+        // Initialize with first slide
+        showSlide(0);
+    </script>
+</body>
+</html>
