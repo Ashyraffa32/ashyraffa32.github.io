@@ -25,3 +25,61 @@ const runAndroidTimer = setInterval(function() {
     }
 }, 1000);
 
+// ===== THEME SETTINGS MODAL =====
+
+// Get modal elements
+const settingsBtn = document.getElementById('settings-btn');
+const modal = document.getElementById('settings-modal');
+const closeBtn = document.getElementById('close-btn');
+const themeRadios = document.querySelectorAll('input[name="theme"]');
+
+// Load saved theme from localStorage when page loads
+window.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('siteTheme') || 'light';
+    applyTheme(savedTheme);
+    document.querySelector(`input[name="theme"][value="${savedTheme}"]`).checked = true;
+});
+
+// Open modal when settings button is clicked
+settingsBtn.addEventListener('click', function() {
+    modal.classList.remove('hidden');
+    modal.classList.add('show');
+});
+
+// Close modal when X button is clicked
+closeBtn.addEventListener('click', function() {
+    modal.classList.add('hidden');
+    modal.classList.remove('show');
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('show');
+    }
+});
+
+// Handle theme change
+themeRadios.forEach(radio => {
+    radio.addEventListener('change', function(e) {
+        const selectedTheme = e.target.value;
+        applyTheme(selectedTheme);
+        localStorage.setItem('siteTheme', selectedTheme);
+    });
+});
+
+// Function to apply theme
+function applyTheme(theme) {
+    // Remove all theme classes
+    document.body.classList.remove('dark-theme', 'inverted-theme');
+    
+    // Apply selected theme
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+    } else if (theme === 'inverted') {
+        document.body.classList.add('inverted-theme');
+    }
+    // 'light' theme is default, no class needed
+}
+

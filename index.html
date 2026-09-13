@@ -12,20 +12,7 @@
     <script src="styles/script.js" defer></script>
 </head>
 <body>
-<div class="indie-countdown-container">
-    <div class="indie-title">ALERT: ANDROID LOCKDOWN</div>
-    <div class="indie-subtitle">Time remaining until Google kills indie apps distribution:</div>
-    
-    <div class="indie-timer">
-        <span id="indie-days">00</span>d : 
-        <span id="indie-hours">00</span>h : 
-        <span id="indie-minutes">00</span>m : 
-        <span id="indie-seconds">00</span>s
-    </div>
-    
-    <div class="indie-flavor-text">"Support indie developers. Don't let corporations control what you install."</div>
-    <a href="https://keepandroidopen.org" target="_blank" class="indie-btn">LEARN HOW TO FIGHT BACK</a>
-</div>
+    <script src="https://keepandroidopen.org/banner.js?link=https://example.com/android&hidebutton=off"></script>
         <header>
             <h1>raffa3527</h1>
         </header>
@@ -67,6 +54,36 @@
         <br>
         <footer>
             That's it bye lol
+            <br>
+            <br>
+            <button id="settings-btn">Site Settings</button>
         </footer>
+
+        <!-- Theme Settings Modal -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Site Settings</h2>
+                    <button id="close-btn" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3>Default Theme</h3>
+                    <div class="theme-options">
+                        <label class="theme-option">
+                            <input type="radio" name="theme" value="light" checked>
+                            <span class="theme-label">Light</span>
+                        </label>
+                        <label class="theme-option">
+                            <input type="radio" name="theme" value="dark">
+                            <span class="theme-label">Dark</span>
+                        </label>
+                        <label class="theme-option">
+                            <input type="radio" name="theme" value="inverted">
+                            <span class="theme-label">Inverted</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

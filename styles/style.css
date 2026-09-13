@@ -84,6 +84,7 @@ body {
     background: #ffffff;
     color: #111;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
@@ -268,5 +269,227 @@ a {
         padding: 18px;
         max-width: 100%;
     }
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+body.dark-theme .modal-content {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+body.dark-theme .modal-header {
+    border-bottom-color: #555555;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #111;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+body.dark-theme .close-btn {
+    color: #e0e0e0;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.modal-body h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.theme-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.theme-option:hover {
+    background-color: #f0f0f0;
+}
+
+body.dark-theme .theme-option:hover {
+    background-color: #3a3a3a;
+}
+
+.theme-option input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.theme-label {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme header h1 {
+    color: #e0e0e0;
+}
+
+body.dark-theme nav a {
+    background: #2a2a2a;
+    color: #6db3f2;
+    border: 1px solid #444444;
+}
+
+body.dark-theme nav a:hover {
+    background: #444444;
+    color: #ffffff;
+}
+
+body.dark-theme section,
+body.dark-theme main p {
+    color: #e0e0e0;
+}
+
+body.dark-theme #introduction,
+body.dark-theme #whatido,
+body.dark-theme #blogs,
+body.dark-theme #mywork {
+    background: #2a2a2a;
+    border: 1px solid #444444;
+    color: #e0e0e0;
+}
+
+body.dark-theme #introduction:hover,
+body.dark-theme #whatido:hover,
+body.dark-theme #blogs:hover,
+body.dark-theme #mywork:hover {
+    background: #333333;
+}
+
+body.dark-theme #introduction p,
+body.dark-theme #whatido p,
+body.dark-theme #blogs p,
+body.dark-theme #mywork p {
+    color: #b0b0b0;
+}
+
+body.dark-theme button:not(.close-btn) {
+    background: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
+}
+
+body.dark-theme button:not(.close-btn):hover {
+    background: #444444;
+}
+
+body.dark-theme footer {
+    color: #e0e0e0;
+}
+
+body.dark-theme a {
+    color: #6db3f2;
+}
+
+/* Inverted Theme */
+body.inverted-theme {
+    background: #000000;
+    color: #00ff00;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.inverted-theme .indie-countdown-container {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.inverted-theme .modal-content {
+    filter: invert(1) hue-rotate(180deg);
 }
 
