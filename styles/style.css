@@ -129,6 +129,60 @@ nav a {
     text-align: center;
 }
 
+nav .tiktok-dropdown {
+    position: relative;
+    flex: 1 1 120px;
+    min-width: 90px;
+}
+
+nav .tiktok-dropdown summary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 14px;
+    color: #000;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 999px;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+nav .tiktok-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+nav .tiktok-dropdown summary:hover,
+nav .tiktok-dropdown[open] summary {
+    color: #fff;
+    background: #000000;
+    transform: translateY(-1px);
+}
+
+nav .tiktok-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 100%;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateX(-50%);
+}
+
+nav .tiktok-menu a {
+    flex: none;
+    white-space: nowrap;
+}
+
 nav a:hover {
     color: #fff;
     background: #000000;
@@ -252,6 +306,16 @@ a {
         font-size: 0.95rem;
         flex: 1 1 100px;
         min-width: 80px;
+    }
+
+    nav .tiktok-dropdown {
+        flex: 1 1 100px;
+        min-width: 80px;
+    }
+
+    nav .tiktok-dropdown summary {
+        padding: 10px 12px;
+        font-size: 0.95rem;
     }
 
     main {
@@ -492,4 +556,3 @@ body.inverted-theme .indie-countdown-container {
 body.inverted-theme .modal-content {
     filter: invert(1) hue-rotate(180deg);
 }
-
